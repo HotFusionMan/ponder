@@ -75,6 +75,10 @@ module Ponder
       end
     end
 
+    def stop
+      EventMachine.stop_event_loop
+    end
+
     # parsing incoming traffic
     def parse(message)
       message.chomp!
